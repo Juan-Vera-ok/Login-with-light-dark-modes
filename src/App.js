@@ -18,6 +18,7 @@ function ModeToggle() {
   // necessary for server-side rendering
   // because mode is undefined on the server
   React.useEffect(() => {
+    setMode('light')
     setMounted(true);
   }, []);
   if (!mounted) {
@@ -37,7 +38,7 @@ function ModeToggle() {
 }
 
 export default function LoginFinal() {
-  return ( <CssVarsProvider>
+  return (<CssVarsProvider>
     <main>
       <ModeToggle />
       <CssBaseline />
@@ -57,7 +58,7 @@ export default function LoginFinal() {
         variant="outlined"
       >
         <div>
-          <Icon/>
+          <Icon />
           <Typography level="h4" component="h1">
             <b>Welcome!</b>
           </Typography>
@@ -92,7 +93,7 @@ export default function LoginFinal() {
       </Sheet>
     </main>
   </CssVarsProvider>
-    
+
   );
 }
 
